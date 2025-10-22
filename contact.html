@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us — Donald Stephen</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: "#0b63d6",
+              muted: "#6b7280",
+              soft: "#eef5ff",
+            },
+            borderRadius: { xl: "12px" },
+            boxShadow: {
+              panel: "0 10px 30px rgba(11, 99, 214, 0.08)",
+              glass: "0 6px 18px rgba(2, 6, 23, 0.06)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gradient-to-b from-soft">
+    <header
+      class="w-full bg-white shadow-md rounded-xl mb-6"
+      data-testid="header"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+        data-testid="header-container"
+      >
+        <!-- Logo / Name -->
+        <div
+          class="text-xl font-semibold text-[#071133]"
+          data-testid="header-logo"
+        >
+          Donald Stephen
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex gap-6" data-testid="header-nav">
+          <a
+            href="./index.html"
+            class="text-gray-600 hover:underline decoration-blue-500 transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:text-[#0b63d6] font-medium transition-colors"
+            data-testid="nav-about"
+          >
+            Home
+          </a>
+          <a
+            href="./about.html"
+            class="text-gray-600 hover:text-[#0b63d6] font-medium transition-colors transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:underline decoration-blue-500"
+            data-testid="nav-about"
+          >
+            About
+          </a>
+          <a
+            href="./contact.html"
+            class="text-gray-600 hover:text-[#0b63d6] font-medium transition-colors transition-transform duration-300 ease-in-out hover:-translate-y-1 underline decoration-blue-500"
+            data-testid="nav-contact"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
+    <div
+      class="bg-gradient-to-b from-soft font-inter min-h-screen flex items-center justify-center p-6"
+    >
+      <section
+        class="rounded-xl shadow-panel bg-white w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8"
+        data-testid="contact-section"
+      >
+        <!-- Form Panel -->
+        <div
+          class="flex flex-col justify-center shadow-md rounded-lg w-full p-6"
+          data-testid="contact-form-panel"
+        >
+          <h1
+            class="text-3xl font-bold text-[#071133] mb-6 text-center"
+            data-testid="contact-title"
+          >
+            Get in Touch
+          </h1>
+
+          <!-- Success Message -->
+          <div
+            id="successMessage"
+            class="hidden mb-6 p-4 rounded bg-accent text-white font-semibold"
+            data-testid="contact-success"
+          >
+            Your message has been sent successfully!
+          </div>
+
+          <form id="contactForm" class="space-y-6" data-testid="contact-form">
+            <!-- Name -->
+            <div data-testid="contact-name-field">
+              <label
+                class="block text-gray-700 font-medium mb-2"
+                for="name"
+                data-testid="contact-name-label"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 transition"
+                required
+                data-testid="contact-name"
+              />
+            </div>
+
+            <!-- Email -->
+            <div data-testid="contact-email-field">
+              <label
+                class="block text-gray-700 font-medium mb-2"
+                for="email"
+                data-testid="contact-email-label"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 transition"
+                required
+                data-testid="contact-email"
+              />
+            </div>
+
+            <!-- Subject -->
+            <div data-testid="contact-subject-field">
+              <label
+                class="block text-gray-700 font-medium mb-2"
+                for="subject"
+                data-testid="contact-subject-label"
+                >Subject</label
+              >
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subject of your message"
+                class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 transition"
+                required
+                data-testid="contact-subject"
+              />
+            </div>
+
+            <!-- Message -->
+            <div data-testid="contact-message-field">
+              <label
+                class="block text-gray-700 font-medium mb-2"
+                for="message"
+                data-testid="contact-message-label"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message..."
+                class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 transition"
+                required
+                data-testid="contact-message"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="bg-accent text-white font-semibold px-6 py-3 rounded-xl hover:bg-blue-700 transition-colors w-full"
+              data-testid="contact-submit"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Info Panel -->
+        <div
+          class="bg-gradient-to-b from-soft/20 to-white rounded-xl shadow-glass p-6 flex flex-col justify-center space-y-6"
+          data-testid="contact-info-panel"
+        >
+          <h2
+            class="text-2xl font-bold text-[#071133]"
+            data-testid="contact-info-title"
+          >
+            Contact Info
+          </h2>
+          <p class="text-muted leading-relaxed" data-testid="contact-info-text">
+            Have a question or want to collaborate? Reach out to me through any
+            of the channels below.
+          </p>
+          <div class="space-y-4">
+            <div
+              class="flex items-center gap-3"
+              data-testid="contact-info-email"
+            >
+              <svg
+                class="w-6 h-6 text-accent"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                data-testid="contact-info-email-icon"
+              >
+                <path
+                  d="M2 4.5A2.5 2.5 0 0 1 4.5 2h15A2.5 2.5 0 0 1 22 4.5v15a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 19.5v-15zM20 6l-8 5L4 6"
+                />
+              </svg>
+              <span data-testid="contact-info-email-text"
+                >donalduko69@gmail.com</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3"
+              data-testid="contact-info-phone"
+            >
+              <svg
+                class="w-6 h-6 text-accent"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                data-testid="contact-info-phone-icon"
+              >
+                <path
+                  d="M6.6 10.8a15.05 15.05 0 0 0 6.6 6.6l2.1-2.1a1 1 0 0 1 1-.26c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1h2.2a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57.11.33.03.69-.26 1l-2.1 2.1z"
+                />
+              </svg>
+              <span data-testid="contact-info-phone-text"
+                >+234 814 340 5610</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3"
+              data-testid="contact-info-location"
+            >
+              <svg
+                class="w-6 h-6 text-accent"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                data-testid="contact-info-location-icon"
+              >
+                <path
+                  d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zM12 11.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"
+                />
+              </svg>
+              <span data-testid="contact-info-location-text"
+                >Lagos, Nigeria</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="fixed top-6 right-6 pointer-events-none z-50">
+          <div
+            id="toast"
+            class="bg-accent text-white px-6 py-4 rounded-xl shadow-lg transform translate-x-[150%] transition-transform duration-300"
+            data-testid="contact-toast"
+          >
+            <p class="font-semibold">
+              Your message has been sent successfully!
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const form = document.getElementById("contactForm");
+      const toast = document.getElementById("toast");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!name || !email || !subject || !message) {
+          alert("Please fill in all required fields.");
+          return;
+        }
+        if (!emailPattern.test(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        // Show toast
+        toast.classList.remove("translate-x-[150%]");
+        toast.classList.add("translate-x-0");
+
+        // Reset form
+        form.reset();
+
+        // Hide toast after 4 seconds
+        setTimeout(() => {
+          toast.classList.remove("translate-x-0");
+          toast.classList.add("translate-x-[150%]");
+        }, 4000);
+      });
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>

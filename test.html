@@ -1,0 +1,328 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastAPI Background</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      fetch("http://localhost:8000/background")
+        .then((res) => res.blob())
+        .then((blob) => {
+          const url = URL.createObjectURL(blob);
+          document.body.style.backgroundImage = `url(${url})`;
+        });
+    </script>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastAPI Background</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      fetch("http://localhost:8000/background")
+        .then((res) => res.blob())
+        .then((blob) => {
+          const url = URL.createObjectURL(blob);
+          document.body.style.backgroundImage = `url(${url})`;
+        });
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Infinite Spiral Animation</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: black;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body style="background: white">
+    <canvas id="turtleCanvas" style="width: 500px color"> kfjknknefnf</canvas>
+    <script>
+      const canvas = document.getElementById("turtleCanvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      let h = 0;
+      let i = 0;
+
+      function draw() {
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        ctx.strokeStyle = `hsl(${h * 360}, 100%, 50%)`;
+        ctx.beginPath();
+
+        let angle = i * 10;
+        let radius = 5 + i * 2;
+        let x = centerX + radius * Math.cos((angle * Math.PI) / 180);
+        let y = centerY + radius * Math.sin((angle * Math.PI) / 180);
+
+        ctx.arc(x, y, 10, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        h += 0.01;
+        i++;
+
+        // Reset after a full cycle to keep it infinite
+        if (i > 225) {
+          i = 0;
+          h = 0;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      draw();
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Infinite Spiral Animation</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: black;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body style="background: white">
+    <canvas id="turtleCanvas" style="width: 500px"> kfjknknefnf</canvas>
+    <script>
+      const canvas = document.getElementById("turtleCanvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      let h = 0;
+      let i = 0;
+
+      function draw() {
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        ctx.strokeStyle = `hsl(${h * 360}, 100%, 50%)`;
+        ctx.beginPath();
+
+        let angle = i * 10;
+        let radius = 5 + i * 2;
+        let x = centerX + radius * Math.cos((angle * Math.PI) / 180);
+        let y = centerY + radius * Math.sin((angle * Math.PI) / 180);
+
+        ctx.arc(x, y, 10, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        h += 0.01;
+        i++;
+
+        // Reset after a full cycle to keep it infinite
+        if (i > 225) {
+          i = 0;
+          h = 0;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      draw();
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Infinite Spiral Animation</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: black;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body style="background: white">
+    <canvas id="turtleCanvas" style="width: 500px"> kfjknknefnf</canvas>
+    <script>
+      const canvas = document.getElementById("turtleCanvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      let h = 0;
+      let i = 0;
+
+      function draw() {
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        ctx.strokeStyle = `hsl(${h * 360}, 100%, 50%)`;
+        ctx.beginPath();
+
+        let angle = i * 10;
+        let radius = 5 + i * 2;
+        let x = centerX + radius * Math.cos((angle * Math.PI) / 180);
+        let y = centerY + radius * Math.sin((angle * Math.PI) / 180);
+
+        ctx.arc(x, y, 10, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        h += 0.01;
+        i++;
+
+        // Reset after a full cycle to keep it infinite
+        if (i > 225) {
+          i = 0;
+          h = 0;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      draw();
+      const canvas = document.getElementById("turtleCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Set font properties
+    ctx.font = "30px Arial"; // Font size and family
+    ctx.fillStyle = "red"; // Text color
+    ctx.textAlign = "center"; // Align text to the center
+    ctx.fillText("Hello Canvas!", 200, 100); // Draw text at (x, y)
+
+    // (Optional) Outline the text
+    ctx.strokeStyle = "black"; // Outline color
+    ctx.strokeText("Hello Canvas!", 200, 100);
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Text with Three.js</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Scene, Camera, Renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Lighting
+        const light = new THREE.PointLight(0xffffff, 1, 100);
+        light.position.set(10, 10, 10);
+        scene.add(light);
+
+        const ambientLight = new THREE.AmbientLight(0x404040);
+        scene.add(ambientLight);
+
+        // Load Font and Create 3D Text
+        const loader = new THREE.FontLoader();
+        loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function(font) {
+            const geometry = new THREE.TextGeometry('Hello 3D!', {
+                font: font,
+                size: 2,
+                height: 0.5,
+                curveSegments: 12,
+                bevelEnabled: true,
+                bevelThickness: 0.1,
+                bevelSize: 0.05,
+                bevelSegments: 5
+            });
+
+            const material = new THREE.MeshPhongMaterial({ color: 0xff6347 });
+            const textMesh = new THREE.Mesh(geometry, material);
+            
+            // Center the text
+            geometry.computeBoundingBox();
+            const centerOffset = -0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x);
+            textMesh.position.x = centerOffset;
+
+            scene.add(textMesh);
+        });
+
+        // Camera Position
+        camera.position.z = 10;
+
+        // Animation Loop
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            // Rotate the scene
+            scene.rotation.y += 0.01;
+            
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Handle Window Resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html> -->

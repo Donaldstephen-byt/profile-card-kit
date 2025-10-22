@@ -11,11 +11,54 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="">
+    <header
+      class="w-full bg-white shadow-md rounded-xl mb-6"
+      data-testid="header"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+        data-testid="header-container"
+      >
+        <!-- Logo / Name -->
+        <div
+          class="text-xl font-semibold text-[#071133]"
+          data-testid="header-logo"
+        >
+          Donald Stephen
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex gap-6" data-testid="header-nav">
+          <a
+            href="./index.html"
+            class="text-gray-600 underline decoration-blue-500 transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:text-[#0b63d6] font-medium transition-colors"
+            data-testid="nav-about"
+          >
+            Home
+          </a>
+          <a
+            href="./about.html"
+            class="text-gray-600 hover:text-[#0b63d6] font-medium transition-colors transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:underline decoration-blue-500"
+            data-testid="nav-about"
+          >
+            About
+          </a>
+          <a
+            href="./contact.html"
+            class="text-gray-600 hover:text-[#0b63d6] font-medium transition-colors transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:underline decoration-blue-500"
+            data-testid="nav-contact"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
     <div class="app">
       <aside
-        data-testid="sidebar"
+        data-testid="test-user-sidebar"
         class="sidebar"
         aria-label="Sidebar with profile summary"
       >
@@ -26,18 +69,23 @@
             alt="Donald Stephen avatar"
             width="140"
             height="140"
-            data-testid="profile-image"
+            data-testid="test-user-avatar"
             id="avatar"
           />
-          <div data-testid="profile-name-section" class="sidebar-name">
-            <h1 data-testid="profile-fullname">Donald Stephen</h1>
-            <p data-testid="profile-role" class="role">Frontend Developer</p>
+          <div
+            data-testid="test-user-profile-name-section"
+            class="sidebar-name"
+          >
+            <h1 data-testid="test-user-profile-fullname">Donald Stephen</h1>
+            <p data-testid="test-user-profile-role" class="role">
+              Frontend Developer
+            </p>
           </div>
         </div>
 
-        <div data-testid="sidebar-contact" class="sidebar-contact">
+        <div data-testid="test-user-sidebar-contact" class="sidebar-contact">
           <a
-            data-testid="contact-email"
+            data-testid="test-user-contact-email"
             href="mailto:donalduko69@gmail.com"
             class="contact-row"
           >
@@ -46,11 +94,13 @@
                 d="M2 4.5A2.5 2.5 0 0 1 4.5 2h15A2.5 2.5 0 0 1 22 4.5v15a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 19.5v-15zM20 6l-8 5L4 6"
               />
             </svg>
-            <span data-testid="email-text">donalduko69@gmail.com</span>
+            <span data-testid="test-user-email-text"
+              >donalduko69@gmail.com</span
+            >
           </a>
 
           <a
-            data-testid="contact-phone"
+            data-testid="test-user-contact-phone"
             href="tel:+2348143405610"
             class="contact-row"
           >
@@ -59,26 +109,26 @@
                 d="M6.6 10.8a15.05 15.05 0 0 0 6.6 6.6l2.1-2.1a1 1 0 0 1 1-.26c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1h2.2a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57.11.33.03.69-.26 1l-2.1 2.1z"
               />
             </svg>
-            <span data-testid="phone-text">+234 814 340 5610</span>
+            <span data-testid="test-user-phone-text">+234 814 340 5610</span>
           </a>
 
-          <div data-testid="contact-location" class="location-row">
+          <div data-testid="test-user-contact-location" class="location-row">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zM12 11.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"
               />
             </svg>
-            <span data-testid="location-text">Lagos, Nigeria</span>
+            <span data-testid="test-user-location-text">Lagos, Nigeria</span>
           </div>
         </div>
 
         <nav
-          data-testid="social-links"
+          data-testid="test-user-social-links"
           class="sidebar-socials"
           aria-label="Social links"
         >
           <a
-            data-testid="social-github"
+            data-testid="test-user-social-github"
             href="https://github.com/Donaldstephen-byt"
             target="_blank"
             rel="noopener noreferrer"
@@ -93,7 +143,7 @@
           </a>
 
           <a
-            data-testid="social-linkedin"
+            data-testid="test-user-social-linkedin"
             href="https://linkedin.com/in/donald-stephen-9004b236a"
             target="_blank"
             rel="noopener noreferrer"
@@ -108,7 +158,7 @@
           </a>
 
           <a
-            data-testid="social-twitter"
+            data-testid="test-user-social-twitter"
             href="https://x.com/DonaldS4598"
             target="_blank"
             rel="noopener noreferrer"
@@ -122,7 +172,7 @@
             <span>Twitter</span>
           </a>
           <a
-            data-testid="social-instagram"
+            data-testid="test-user-social-instagram"
             href="https://www.instagram.com/donald_stephen205?igsh=MWs4eXdweXlvd2xoMA=="
             target="_blank"
             rel="noopener noreferrer"
@@ -143,7 +193,7 @@
             <span>Instagram</span>
           </a>
           <a
-            data-testid="social-facebook"
+            data-testid="test-user-social-facebook"
             href="https://www.facebook.com/viewfinder.vibes.871412"
             target="_blank"
             rel="noopener noreferrer"
@@ -166,45 +216,45 @@
         </nav>
       </aside>
 
-      <main data-testid="profile-main" class="main">
-        <section data-testid="profile-card" class="profile-card">
-          <div class="profile-left" data-testid="profile-left">
-            <h3 data-testid="about-title">About</h3>
-            <p class="about-text" data-testid="about-text">
-              Passionate frontend developer focused on clean UI and performance.
-              I enjoy learning new technologies and building useful web
-              experiences.
+      <main data-testid="test-user-profile-main" class="main">
+        <section data-testid="test-user-profile-card" class="profile-card">
+          <div class="profile-left" data-testid="test-user-profile-left">
+            <h3 data-testid="test-user-skills-title">My Skills 💻</h3>
+            <p class="about-text" data-testid="skills-text">
+              🟢 Proficient: React, JavaScript (ES6+), HTML, CSS, Tailwind 🔵
+              Familiar: TypeScript, Redux, Node.js 🟡 Exploring: Web3, Next.js,
+              GSAP for animations
             </p>
 
             <div class="info-grid">
-              <div class="info-row" data-testid="info-fullname">
+              <div class="info-row" data-testid="test-user-info-fullname">
                 <span class="label">Full name</span>
                 <span class="value">Donald Stephen</span>
               </div>
-              <div class="info-row" data-testid="info-role">
+              <div class="info-row" data-testid="test-user-info-role">
                 <span class="label">Role</span>
                 <span class="value">Frontend Developer</span>
               </div>
-              <div class="info-row" data-testid="info-email">
+              <div class="info-row" data-testid="test-user-info-email">
                 <span class="label">Email</span>
                 <a class="value link" href="mailto:donalduko69@gmail.com"
                   >mailto:donalduko69@gmail.com</a
                 >
               </div>
-              <div class="info-row" data-testid="info-phone">
+              <div class="info-row" data-testid="test-user-info-phone">
                 <span class="label">Phone</span>
                 <a class="value link" href="tel:+2348100000000"
                   >+234 814 340 5610</a
                 >
               </div>
-              <div class="info-row" data-testid="info-location">
+              <div class="info-row" data-testid="test-user-info-location">
                 <span class="label">Location</span>
                 <span class="value">Abuja, Nigeria</span>
               </div>
             </div>
           </div>
 
-          <aside class="profile-right" data-testid="profile-right">
+          <aside class="profile-right" data-testid="test-user-profile-right">
             <div class="card-section" data-testid="hobbies-section">
               <h4>Hobbies</h4>
               <ul class="chips">

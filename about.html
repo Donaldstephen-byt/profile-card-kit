@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Donald Stephen</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: "#0b63d6",
+              muted: "#6b7280",
+              soft: "#eef5ff",
+            },
+            borderRadius: {
+              xl: "12px",
+            },
+            boxShadow: {
+              panel: "0 10px 30px rgba(11, 99, 214, 0.08)",
+              glass: "0 6px 18px rgba(2, 6, 23, 0.06)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gradient-to-b from-soft to-white text-[#071133] font-inter">
+    <!-- Header -->
+    <header
+      class="w-full bg-white shadow-md rounded-xl mb-6"
+      data-testid="header"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+        data-testid="header-container"
+      >
+        <div
+          class="text-xl font-semibold text-[#071133]"
+          data-testid="header-logo"
+        >
+          Donald Stephen
+        </div>
+        <nav class="flex gap-6" data-testid="header-nav">
+          <a
+            href="./index.html"
+            class="text-gray-600 hover:underline decoration-blue-500 transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:text-[#0b63d6] font-medium transition-colors"
+            data-testid="nav-about"
+          >
+            Home
+          </a>
+          <a
+            href="./about.html"
+            class="text-gray-600 hover:text-[#0b63d6] font-medium transition-colors transition-transform duration-300 ease-in-out hover:-translate-y-1  underline decoration-blue-500"
+            data-testid="nav-about"
+          >
+            About
+          </a>
+          <a
+            href="./contact.html"
+            class="text-gray-600 hover:text-[#0b63d6] font-medium transition-colors transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:underline decoration-blue-500"
+            data-testid="nav-contact"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <main class="max-w-7xl mx-auto px-6">
+      <section
+        class="bg-white rounded-xl shadow-panel p-8 mb-6 w-full sm:flex gap-4"
+        data-testid="about-section"
+      >
+        <!-- Page Title -->
+
+        <!-- Bio -->
+        <div class="sm:w-[60%]">
+          <h1
+            class="text-3xl font-bold text-[#071133] mb-8"
+            data-testid="about-title"
+          >
+            About Me
+          </h1>
+          <div class="bg-white rounded-xl shadow-panel p-4">
+            <div class="mb-6" data-testid="test-about-bio">
+              <div class="border-l-4 border-accent pl-4">
+                <h2 class="text-2xl font-semibold text-[#071133] mb-2">Bio</h2>
+                <p class="text-muted leading-relaxed max-w-4xl">
+                  Hello! I am <span class="font-semibold">Donald Stephen</span>,
+                  a Frontend Developer participating in the HNG program. I enjoy
+                  building user-friendly web applications that solve real
+                  problems while continuously learning new technologies.
+                </p>
+              </div>
+            </div>
+
+            <!-- Goals in this Program -->
+            <div class="mb-6" data-testid="test-about-goals">
+              <div class="border-l-4 border-accent pl-4">
+                <h2 class="text-2xl font-semibold text-[#071133] mb-2">
+                  Goals in this Program
+                </h2>
+                <p class="text-muted leading-relaxed max-w-4xl">
+                  My main goals are to improve my frontend skills, master modern
+                  frameworks like React and Tailwind, and contribute
+                  meaningfully to real-world projects while growing as a
+                  developer.
+                </p>
+              </div>
+            </div>
+
+            <!-- Areas of Low Confidence -->
+            <div class="mb-6" data-testid="test-about-confidence">
+              <div class="border-l-4 border-accent pl-4">
+                <h2 class="text-2xl font-semibold text-[#071133] mb-2">
+                  Areas of Low Confidence
+                </h2>
+                <p class="text-muted leading-relaxed max-w-4xl">
+                  I am currently less confident with advanced CSS animations,
+                  accessibility best practices, and integrating APIs
+                  efficiently. I plan to strengthen these areas through focused
+                  practice during the program.
+                </p>
+              </div>
+            </div>
+
+            <!-- Note to Future Self -->
+            <div class="mb-6" data-testid="test-about-future-note">
+              <div class="border-l-4 border-accent pl-4">
+                <h2 class="text-2xl font-semibold text-[#071133] mb-2">
+                  Note to Future Self
+                </h2>
+                <p class="text-muted leading-relaxed max-w-4xl">
+                  Keep learning every day, stay curious, and don’t be afraid to
+                  try new things. Your growth as a frontend developer depends on
+                  consistent practice and reflection.
+                </p>
+              </div>
+            </div>
+
+            <!-- Extra Thoughts -->
+            <div class="mb-6" data-testid="test-about-extra">
+              <div class="border-l-4 border-accent pl-4">
+                <h2 class="text-2xl font-semibold text-[#071133] mb-2">
+                  Extra Thoughts
+                </h2>
+                <p class="text-muted leading-relaxed max-w-4xl">
+                  I am grateful for the opportunity to participate in the HNG
+                  program. It’s a chance to connect with talented peers, build
+                  real projects, and refine my skills as a frontend developer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section
+          class="bg-white rounded-xl shadow-md p-8 mb-6 sm:w-[40%]"
+          data-testid="about-section"
+        >
+          <!-- Skills -->
+          <h2
+            class="text-2xl font-semibold text-[#071133] mb-3"
+            data-testid="about-skills-title"
+          >
+            Technical Skills
+          </h2>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"
+            data-testid="about-skills"
+          >
+            <div
+              class="bg-soft rounded-xl p-4 shadow-sm"
+              data-testid="skill-proficient"
+            >
+              <h3 class="font-semibold text-accent mb-2">Proficient</h3>
+              <p class="text-muted">
+                React, JavaScript (ES6+), HTML, CSS, Tailwind CSS
+              </p>
+            </div>
+            <div
+              class="bg-soft rounded-xl p-4 shadow-sm"
+              data-testid="skill-familiar"
+            >
+              <h3 class="font-semibold text-accent mb-2">Familiar</h3>
+              <p class="text-muted">TypeScript, Redux, Node.js, Next.js</p>
+            </div>
+            <div
+              class="bg-soft rounded-xl p-4 shadow-sm"
+              data-testid="skill-exploring"
+            >
+              <h3 class="font-semibold text-accent mb-2">Exploring</h3>
+              <p class="text-muted">
+                Web3, GraphQL, GSAP Animations, Advanced UI/UX Design
+              </p>
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <h2
+            class="text-2xl font-semibold text-[#071133] mb-3"
+            data-testid="about-experience-title"
+          >
+            Experience
+          </h2>
+          <ul
+            class="list-disc list-inside text-muted mb-6"
+            data-testid="about-experience"
+          >
+            <li data-testid="experience-item">
+              Developed responsive web applications for clients in finance,
+              e-commerce, and education sectors.
+            </li>
+            <li data-testid="experience-item">
+              Led frontend projects using React and Tailwind CSS, ensuring
+              cross-browser compatibility and accessibility standards.
+            </li>
+            <li data-testid="experience-item">
+              Collaborated closely with designers to translate UI/UX designs
+              into functional interfaces.
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
