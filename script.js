@@ -48,19 +48,18 @@ async function loadPage(url) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");
 
-    // Replace main content only
     const newContent = doc.querySelector("#main-content");
     if (newContent) {
       document.querySelector("#main-content").innerHTML = newContent.innerHTML;
     }
 
-    // Optionally, re-run scripts for the new page (e.g., contact form)
+
   } catch (err) {
     console.error("Failed to load page:", err);
   }
 }
 
-// Handle browser back/forward buttons
+
 window.addEventListener("popstate", () => {
   loadPage(location.pathname);
 });
